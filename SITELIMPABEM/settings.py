@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sitelb.apps.SitelbConfig',
+    'atendimento.apps.AtendimentoConfig',
+    'cliente.apps.ClienteConfig',
+    'funcionario.apps.FuncionarioConfig',
+    'servico.apps.ServicoConfig',
 ]
 
 MIDDLEWARE = [
