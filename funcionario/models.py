@@ -8,3 +8,6 @@ class Funcionario(models.Model):
         )
     cargo = models.CharField(max_length=50, choices=CARGO_OPCOES)
     nome = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.nome

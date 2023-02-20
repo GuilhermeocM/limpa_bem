@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'cliente.apps.ClienteConfig',
     'funcionario.apps.FuncionarioConfig',
     'servico.apps.ServicoConfig',
+    'cadastro.apps.CadastroConfig',
+    'tela_acompanhamento.apps.TelaAcompanhamentoConfig',
 ]
 
 MIDDLEWARE = [
@@ -108,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -126,3 +128,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# MENSAGENS
+
+from django.contrib.messages import constants
+
+MESSAGE_TAGS = {
+    constants.SUCCESS: 'alert-success',
+}
