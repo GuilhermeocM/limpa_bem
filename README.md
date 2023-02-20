@@ -15,4 +15,4 @@ Para cadastrar e agendar uma limpeza é necessario que todo os campos estejam pr
 
 ⚠️⚠️⚠️⚠️⚠️
 
-PARA EXECUÇÃO PERFEITA DO PROJETO É RECOMENDAVEL INSTALAR O  -->  REQUIREMENTS.TXT   <--
+PARA EXECUÇÃO PERFEITA DO PROJETO É RECOMENDAVEL INSTALAR O  -->  REQUIREMENTS.TXT   <-- NO SEU AMBIENTE VIRTUAL PODE SER UTILIZADO O COMANDO -->   pip install -r .\requirements.txt    <--
