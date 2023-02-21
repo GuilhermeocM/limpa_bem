@@ -1,11 +1,10 @@
 from django.db import models
 from django.utils import timezone
 from django import forms
-
-
 from servico.models import Servico
 from funcionario.models import Funcionario
 from cliente.models import Cliente
+
 
 class Atendimento(models.Model):
     PAGAMENTO_OPCOES = (
