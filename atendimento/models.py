@@ -6,6 +6,15 @@ from funcionario.models import Funcionario
 from cliente.models import Cliente
 
 
+def site():
+    atendentes = Funcionario.objects.get(id=1)
+    return atendentes
+
+def guilherme():
+    atendentes = Funcionario.objects.get(id=6)
+    return atendentes
+
+
 class Atendimento(models.Model):
     PAGAMENTO_OPCOES = (
         ("cartao", "Cartao"),
@@ -21,15 +30,15 @@ class Atendimento(models.Model):
 
 
     servico = models.ForeignKey(Servico, on_delete=models.DO_NOTHING, blank=True)
-    atendente = models.ForeignKey(Funcionario, blank=True, on_delete=models.DO_NOTHING, related_name="atendimentos")
-    helper = models.ForeignKey(Funcionario, blank=True, on_delete=models.DO_NOTHING, related_name="atendimentos_helper")
+    atendente = models.ForeignKey(Funcionario, blank=True, on_delete=models.DO_NOTHING, related_name="atendimentos", default=site)
+    helper = models.ForeignKey(Funcionario, blank=True, on_delete=models.DO_NOTHING, related_name="atendimentos_helper", default=guilherme)
     cliente = models.ForeignKey(Cliente, on_delete=models.DO_NOTHING)
     desconto = models.CharField(max_length=20, blank=True)
     valor_pago = models.CharField(max_length=20, blank=True)
     data_hora_cadastro = models.DateTimeField(default=timezone.now)
     data_hora_agendamento = models.DateTimeField()
     forma_pagmento = models.CharField(max_length=20, choices=PAGAMENTO_OPCOES)
-    situacao = models.CharField(max_length=20, choices=SITUACAO_OPCOES)
+    situacao = models.CharField(max_length=20, choices=SITUACAO_OPCOES, default='Pendente')
 
 
     def __str__(self):
