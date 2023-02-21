@@ -6,8 +6,8 @@ from atendimento.models import Atendimento
 def acompanhamento(request):
     atendentes = Funcionario.objects.filter(cargo="atendente")
     return render(request, 'acompanhamento.html', {
-    'atendentes': atendentes,        
-     })
+    'atendentes': atendentes,
+    })
         
 
 def voltarhome(request):

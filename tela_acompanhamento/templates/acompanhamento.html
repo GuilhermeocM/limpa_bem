@@ -29,7 +29,7 @@
       </button>
     </div>
     <div class="container">
-      <a class="navbar-brand" href="home/">Voltar para home</a>
+      <a class="navbar-brand" href="home/"><b>HOME</b></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,9 +52,12 @@
           <tbody>
             <tr>
               {% for atendimento in atendente.atendimentos.all %}
-                <td><a href="{{ atendimento.id }}">
+              <td><a href="{{ atendimento.id }}">
                 {{ atendimento.id }} - {{ atendimento.data_hora_agendamento }} - 
-                {{ atendimento.situacao }}
+                {% if atendimento.situacao == 'pendente' %}<span style="color: darkorange;"> {% endif %}
+                {% if atendimento.situacao == 'realizado' %}<span style="color: darkgreen;"> {% endif %}
+                {% if atendimento.situacao == 'cancelado' %}<span style="color: darkred;"> {% endif %}
+                <b>{{atendimento.situacao }}</b></span>
               </a></td>
             </tr>
           </tbody>

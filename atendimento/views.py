@@ -15,3 +15,7 @@ def agendamento(request):
         messages.add_message(request, messages.SUCCESS, 'Agendamento cadastrado com sucesso!')
 
     return redirect('agendamento')
+
+
+def voltarhome(request):
+    return redirect('home')
