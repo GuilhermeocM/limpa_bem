@@ -4,7 +4,7 @@ Sera necessario baixar o framework django 4.1.6 no seu IDE
 
 Abrir o folder do projeto
 
-Rodar o seridor local com comando -->   python manage.py runserver
+Rodar o servidor local com comando -->   python manage.py runserver
 
 Logo apos sera gerado um link exemplo: http://127.0.0.1:8000/
 
